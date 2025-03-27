@@ -4,7 +4,7 @@ import os from "os"
 
 const app =express()
 
-console.log(`Worker ${process.pid} started `)
+console.log(`Worker node  ${process.pid} started `)
 
 app.get("/",(req,res)=>{
     res.send("Hello World")
@@ -18,7 +18,7 @@ app.get("/cpu",(req,res)=>{
 })
 
 
-app.get("/host",()=>{
+app.get("/host",(req,res)=>{
     res.send(os.hostname())
 })
 
